@@ -27,7 +27,7 @@
 
   <!-- Launch Kimera Semantics -->
   <!-- If using in real time with realsense camera, change file to kimera_semantics_realsense.launch -->
-  <include file="$(find kimera_semantics_ros)/launch/kimera_semantics_gazebo.launch">
+  <include file="$(find kimera_semantics_ros)/launch/kimera_semantics_realsense.launch">
         <!-- Input -->
         <arg name="left_cam_info_topic"         default="$(arg camera_info_topic)"/>
         <arg name="left_cam_topic"              default="$(arg color_topic)"/>
@@ -39,6 +39,6 @@
 
   <!-- Launch Rviz for Visualization -->
   <!-- If using in real time with realsense camera, change file to kimera_semantics_realsense.rviz -->
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find kimera_semantics_ros)/rviz/kimera_semantics_gazebo.rviz" />
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find kimera_semantics_ros)/rviz/kimera_semantics_realsense.rviz" />
 
 </launch>
